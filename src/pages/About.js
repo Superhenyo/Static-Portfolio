@@ -3,7 +3,10 @@ import { Container, Row, Col } from "react-bootstrap";
 import landingPhotos from "../images/landingPage/landingPage.png";
 import contacts from "../data/contacts";
 
+
+
 function About() {
+
   return (
     <Container className="landingPageheight"  >
       <Row>

@@ -1,14 +1,7 @@
-import LandingPage from "../components/LandingPage";
+import React from "react";
 
+import ParticleBackground from "../components/Background";
 
-function Home() {
-
-    return (
-        <>
-            <LandingPage />
-        </>
-    )
-
+export default function Home() {
+  return <ParticleBackground />
 }
-
-export default Home;
