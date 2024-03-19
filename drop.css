@@ -1,0 +1,42 @@
+.cloud1 {
+    position: absolute;
+    width: 270px;
+    height: 150px;
+    top: 40%;
+    left: 50%;
+    animation: jumpingClouds 4.5s linear infinite;
+  }
+  .cloud2 {
+    position: absolute;
+    width: 270px;
+    height: 150px;
+    top: 45%;
+    left: 30%;
+    animation: jumpingClouds 4s linear infinite;
+  }
+  .cloud3 {
+    position: absolute;
+    width: 270px;
+    height: 150px;
+    top: 40%;
+    left: 10%;
+    animation: jumpingClouds 3.8s linear infinite;
+  }
+  
+  @keyframes jumpingClouds {
+    0% {
+      transform: translateY(10px) translateX(3px);
+    }
+    25% {
+      transform: translateY(20px) translateX(5px);
+    }
+    50% {
+      transform: translateY(30px) translateX(2px);
+    }
+    75% {
+      transform: translateY(20px) translateX(5px);
+    }
+    100% {
+      transform: translateY(10px) translateX(3px);
+    }
+  }
