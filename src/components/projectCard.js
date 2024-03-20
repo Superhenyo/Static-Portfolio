@@ -24,7 +24,7 @@ export default function ProjectsCard({ projectProps }) {
                 <Card className="projectCard bg-black border-warning-subtle">
                     <img src={picture} alt="Landing" className="projectImages img-fluid" />
                     <Card.Body>
-                        <a href={link}>
+                        <a href={link} target="_blank" rel="noreferrer">
                             <Card.Title className="cardTitle">{name}</Card.Title>
                         </a>
                         <Card.Text className="allParagraph">{description}</Card.Text>

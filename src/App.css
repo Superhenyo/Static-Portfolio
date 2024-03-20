@@ -180,5 +180,11 @@ button:active {
   border-radius: 50%;
   background-color: white;
 }
-
-
+#tsparticles {
+  position: fixed; /* Fixed positioning to ensure it covers the entire viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Set a lower z-index to place it behind other content */
+}
