@@ -10,7 +10,10 @@ function MorphingBackground() {
         let i = 0;
         const typingInterval = setInterval(() => {
             if (i < text.length) {
-                setDisplayText(prevText => prevText + text.charAt(i) + ' '); // Add a space after each character
+                const charToAdd = text.charAt(i);
+                setDisplayText(prevText => {
+                    return prevText + (charToAdd !== ' ' ? charToAdd + '' : charToAdd);
+                });
                 i++;
             } else {
                 clearInterval(typingInterval);
@@ -19,7 +22,6 @@ function MorphingBackground() {
 
         return () => clearInterval(typingInterval);
     }, [text]);
-
 
     useEffect(() => {
         let curX = 0;
