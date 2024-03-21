@@ -3,8 +3,8 @@ import logoIcon from "../images/LOGOIcon.png";
 
 function AppNavbar() {
   return (
-    <Container fluid className="bg-black p-0 m-0 sticky-top">
-      <Navbar collapseOnSelect expand="lg">
+    <Container fluid className="p-0 m-0 sticky-top">
+      <Navbar collapseOnSelect expand="lg" className="navBarBackground">
         <Navbar.Brand href="/" className="ms-5">
           <img
             src={logoIcon}
@@ -17,7 +17,7 @@ function AppNavbar() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav ml-5">
           <Nav className="ms-auto d-flex justify-content-around">
-            <Nav.Link href="/"   className="navBarFont ms-2 me-5">
+            <Nav.Link href="/" className="navBarFont ms-2 me-5">
               Home
             </Nav.Link>
             <Nav.Link href="projects" className="navBarFont ms-2 me-5">

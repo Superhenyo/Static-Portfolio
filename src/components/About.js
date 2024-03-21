@@ -2,9 +2,9 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import landingPhotos from "../images/landingPage/landingPage.png";
 import contacts from "../data/contacts";
-import ParticleBackground from "../components/Background";
+import ParticleBackground from "./ParticleBackground";
 
-function About() {
+function Intro() {
   return (
     <>
       <ParticleBackground />
@@ -40,9 +40,7 @@ function About() {
                     ))}
                   </Col>
                 </Row>
-
               </div>
-
             </div>
           </Col>
         </Row>
@@ -51,4 +49,4 @@ function About() {
   );
 }
 
-export default About;
+export default Intro;
