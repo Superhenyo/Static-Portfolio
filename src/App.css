@@ -267,8 +267,8 @@ button:active {
 .gradient-bg {
   margin: 0;
   width: 100vw;
-  height: 92.5vh;
-  position: relative;
+  height: 100vh;
+  position: absolute;
   overflow: hidden;
   background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
   top: 0;
@@ -279,12 +279,14 @@ button:active {
   }
 
   .gradients-container {
+    overflow: hidden;
     filter: url(#goo) blur(40px);
     width: 100vw;
     height: 100%;
   }
 
   .g1 {
+    overflow: hidden;
     position: absolute;
     background: radial-gradient(
         circle at center,
@@ -306,6 +308,7 @@ button:active {
   }
 
   .g2 {
+    overflow: hidden;
     position: absolute;
     background: radial-gradient(
         circle at center,
@@ -327,6 +330,7 @@ button:active {
   }
 
   .g3 {
+    overflow: hidden;
     position: absolute;
     background: radial-gradient(
         circle at center,
@@ -349,6 +353,7 @@ button:active {
 
   .g4 {
     position: absolute;
+    overflow: hidden;
     background: radial-gradient(
         circle at center,
         rgba(var(--color4), 0.8) 0,
@@ -369,6 +374,7 @@ button:active {
   }
 
   .g5 {
+    overflow: hidden;
     position: absolute;
     background: radial-gradient(
         circle at center,
@@ -390,6 +396,7 @@ button:active {
   }
 
   .interactive {
+    overflow: hidden;
     position: absolute;
     background: radial-gradient(
         circle at center,
