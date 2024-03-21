@@ -23,7 +23,7 @@ function Projects() {
     const projTech = technology.map((tech, index) => (
       <button className="technology-button" onClick={handleClick} key={index}>
         <img src={tech.icon} alt={tech.name + " icon"} className="tech-icon" />
-        {tech.name}
+        {" " + tech.name}
       </button>
     ));
 

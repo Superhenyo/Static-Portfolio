@@ -18,10 +18,8 @@ body {
 
 /* NavBar */
 .navBarBackground {
- background-color: rgba(20, 4, 139, 0.126);
+ background-color: rgba(0, 0, 0, 0.126);
 }
-
-
 .navBarFont {
   color: white !important;
   font-size: 22px;
@@ -31,25 +29,46 @@ body {
 }
 /* NavBar */
 
-/* Landing Page */
-.landingPageheight {
+/* About Page */
+.introAbout {
   height: 80vh;
 }
-.landingPageH1 {
-  font-family: Roboto, "Times New Roman", Times, serif;
+.introAbout h1{
+  font-family: "Helvetica Neue", "Times New Roman", Times, serif;
+  color: rgb(131, 131, 131);
+  font-size: 50px;
+}
+.introAbout p{
+  text-indent: 50px;
+  text-align: justify;
+  color: rgb(131, 131, 131);
+  font-size: 20px;
 }
 
 .allParagraph {
   text-indent: 50px;
   text-align: justify;
-  color: white;
+  color: rgb(240, 240, 240);
   font-size: smaller;
 }
 .person {
   width: auto;
   height: 92vh;
 }
-/* Landing Page */
+
+.contacts-icon {
+  width: 30px;
+  height: 30px;
+  border: 1px solid white;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 0 2px 3px #fff;
+}
+.contacts-icon:hover {
+  box-shadow: 0 0 20px 3px #fff;
+}
+
+/* About Page */
 
 /* Project Page */
 .projectPageSize {
@@ -81,11 +100,15 @@ body {
   max-height: 600px;
   max-width: 400px;
 }
+.tech-icon {
+  width: 24px;
+  height: 24px; 
+  left: 2px;
+}
 
-.projectCard {
+.projectCard  {
   min-height: 400px;
   max-height: 400px;
-  background-color: black;
 }
 
 .projectImages {
@@ -169,20 +192,7 @@ button:active {
 }
 
 /* CSS */
-.tech-icon {
-  width: 24px; /* Adjust the width as needed */
-  height: 24px; /* Adjust the height as needed */
-  left: 2px;
-}
 
-.contacts-icon {
-  /* margin-left: 50px; */
-  width: 30px;
-  height: 30px;
-  border: 1px solid white;
-  border-radius: 50%;
-  background-color: white;
-}
 #tsparticles {
   position: fixed; /* Fixed positioning to ensure it covers the entire viewport */
   top: 0;

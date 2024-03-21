@@ -8,13 +8,13 @@ function Intro() {
   return (
     <>
       <ParticleBackground />
-      <Container className="landingPageheight"  >
+      <Container className="introAbout"  >
         <Row>
           <Col className="d-flex flex-column justify-content-end col-12 col-md-6">
             <img src={landingPhotos} alt="Landing" className="person" />
           </Col>
           <Col className="d-flex flex-column mt-5 col-12 col-md-6">
-            <h1 className="my-5">Hello there! Welcome</h1>
+            <h1 className="my-5">Hello there!</h1>
             <div>
               <p className="allParagraph">
                 I am Emil a Computer Engineering graduate with practical experience as

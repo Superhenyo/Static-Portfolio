@@ -1,5 +1,5 @@
 import React from "react";
-import Intro from "../components/About";
+import Intro from "../components/IntroAbout";
 
 function About() {
   return (

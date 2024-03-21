@@ -57,7 +57,11 @@ const technology = [
     }, 
     {
         name: "Google Sheet",
-        icon: require("../images/images/Tools/arduino.png")
+        icon: require("../images/images/Tools/google-sheet.png")
+    }, 
+    {
+        name: "TypeScript",
+        icon: require("../images/images/Tools/typescript.png")
     }, 
 ]
 export default technology;

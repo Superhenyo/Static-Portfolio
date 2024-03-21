@@ -19,7 +19,7 @@ const projects = [
         id: "03",
         name: "E-commerce Backend",
         description: "An e-commerce backend using express.js and mongoDB",
-        Tools: ["Nodes.js", "Express.js", "MongoDB"],
+        Tools: ["Nodes.js", "Express.js", "MongoDB", "Postman"],
         picture: require('../images/Projects pictures/Ecommerce backend.png'),
         link: "https://github.com/Superhenyo/E-commerce-Backend"
     },
@@ -27,7 +27,7 @@ const projects = [
         id: "04",
         name: "Boarding Finder",
         description: "Using MERN technologies, a website for finding bording house",
-        Tools: ["Nodes.js", "React.js", "BootStrap", "HTML", "CSS", "MongoDB"],
+        Tools: ["Nodes.js", "React.js", "BootStrap", "HTML", "CSS", "MongoDB", "TypeScript"],
         picture: require('../images/Projects pictures/Ecommerce backend.png'),
         link: "https://github.com/Superhenyo/Boarding_House"
     },
