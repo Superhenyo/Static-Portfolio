@@ -1,9 +1,25 @@
-// MorphingBackground.jsx
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Container } from 'react-bootstrap';
 
 function MorphingBackground() {
     const interBubbleRef = useRef(null);
+    const [displayText, setDisplayText] = useState('');
+    const text = "Someday I will be great";
+
+    useEffect(() => {
+        let i = 0;
+        const typingInterval = setInterval(() => {
+            if (i < text.length) {
+                setDisplayText(prevText => prevText + text.charAt(i) + ' '); // Add a space after each character
+                i++;
+            } else {
+                clearInterval(typingInterval);
+            }
+        }, 100);
+
+        return () => clearInterval(typingInterval);
+    }, [text]);
+
 
     useEffect(() => {
         let curX = 0;
@@ -33,36 +49,30 @@ function MorphingBackground() {
     }, []);
 
     return (
-        <>
-            <Container className='img-fluid m-0 p-0'>
-                <div className="text-container d-flex flex-column">
-                   <h1>Good Day Humans</h1>
-                   <h6>(Portfolio incomplete)</h6>
+        <Container className='img-fluid m-0 p-0'>
+            <div className="text-container d-flex flex-column">
+                <h1 className='typeWriter'>{displayText}</h1>
+            </div>
+            <div className="gradient-bg">
+                <svg xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <filter id="goo">
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+                            <feBlend in="SourceGraphic" in2="goo" />
+                        </filter>
+                    </defs>
+                </svg>
+                <div className="gradients-container">
+                    <div className="g1"></div>
+                    <div className="g2"></div>
+                    <div className="g3"></div>
+                    <div className="g4"></div>
+                    <div className="g5"></div>
+                    <div className="interactive" ref={interBubbleRef}></div>
                 </div>
-                    
-                <div className="gradient-bg">
-                    <svg xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <filter id="goo">
-                                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-                                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
-                                <feBlend in="SourceGraphic" in2="goo" />
-                            </filter>
-                        </defs>
-                    </svg>
-                    <div className="gradients-container">
-                        <div className="g1"></div>
-                        <div className="g2"></div>
-                        <div className="g3"></div>
-                        <div className="g4"></div>
-                        <div className="g5"></div>
-                        <div className="interactive" ref={interBubbleRef}></div>
-                    </div>
-                </div>
-
-            </Container>
-
-        </>
+            </div>
+        </Container>
     );
 }
 

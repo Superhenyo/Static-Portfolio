@@ -13,7 +13,6 @@ function Projects() {
   const [projects, setProjects] = useState([]);
   const [clicked, setClicked] = useState(false);
 
-  const { name, icon } = projectData;
 
 
   const handleClick = () => {
