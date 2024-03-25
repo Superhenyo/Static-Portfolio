@@ -50,10 +50,31 @@ function MorphingBackground() {
         };
     }, []);
 
+    const handleClick = async () => {
+        console.log("clicked")
+        try {
+            const response = await fetch('https://portofolio-backend-f6lt.onrender.com/user/counter', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+            if (response.ok) {
+                console.log('Counter incremented successfully');
+            } else {
+                console.error('Failed to increment counter');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    };
+
+
     return (
         <Container className='img-fluid m-0 p-0'>
             <div className="text-container d-flex flex-column">
                 <h1 className='typeWriter'>{displayText}</h1>
+                <button className='landingButton' onClick={handleClick}>Click me!</button>
             </div>
             <div className="gradient-bg">
                 <svg xmlns="http://www.w3.org/2000/svg">
