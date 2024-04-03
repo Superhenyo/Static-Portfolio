@@ -1,13 +1,22 @@
 import React from "react";
-import { Container } from 'react-bootstrap';
-// import ParticleBackground from "../components/ParticleBackground";
-import MorphingBackground from "../components/MorphingBackground";
+import { Container } from "react-bootstrap"
+import Intro from "../components/IntroAbout";
+import TechAndProjects from "../components/techStackandProjects";
+import ParticleBackground from '../components/ParticleBackground'
+// import MorphingBackground from "../components/MorphingBackground";
 
 export default function Home() {
   return (
     <>
-      <MorphingBackground />
-      {/* <ParticleBackground /> */}
+      <Container className="PageSize" id="Home">
+        <ParticleBackground />
+        <Intro />
+      </Container >
+
+      <Container className="PageSize">
+        <h1 className="text-center mt-5" id="Projects">Projects</h1>
+        < TechAndProjects />
+      </Container >
     </>
   )
 }

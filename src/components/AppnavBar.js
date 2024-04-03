@@ -17,14 +17,14 @@ function AppNavbar() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav ml-5">
           <Nav className="ms-auto d-flex justify-content-around" id="ads">
-            <Nav.Link href="/" className="navBarFont" >
+            <Nav.Link href="#Home" className="navBarFont" >
               Home
             </Nav.Link>
-            <Nav.Link href="projects" className="navBarFont">
+            <Nav.Link href="#Projects" className="navBarFont">
               Project
             </Nav.Link>
-            <Nav.Link href="about" className="navBarFont">
-              About
+            <Nav.Link href="#Projects" className="navBarFont">
+              {/* About */}
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

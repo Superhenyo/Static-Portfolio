@@ -53,9 +53,6 @@ body {
 /* NavBar */
 
 /* About Page */
-.introAbout {
-  height: 80vh;
-}
 .introAbout h1{
   font-family: "Helvetica Neue", "Times New Roman", Times, serif;
   color: rgb(131, 131, 131);
@@ -95,9 +92,8 @@ body {
 /* About Page */
 
 /* Project Page */
-.projectPageSize {
-  width: 100vh;
-  height: 100vh;
+.PageSize {
+  width: 100vw;
 }
 
 .technology-button {
@@ -220,14 +216,24 @@ button:active {
 
 /* Particle Background */
 #tsparticles {
-  position: fixed; /* Fixed positioning to ensure it covers the entire viewport */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Set a lower z-index to place it behind other content */
-}
+  z-index: -2;
+}   
+
 /* End Particle Background */
+
+#MorpBackground{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
 
 
 .text-container {
@@ -473,7 +479,9 @@ Navbar {
   box-shadow: 0 0 15px 2px rgba(0, 142, 236, 0.815);
 }
 
-
+.testing {
+height: 100vh;
+}
 /* End Landing Page  */
 
 
