@@ -18,10 +18,10 @@ const projects = [
     {
         id: "03",
         name: "E-commerce Backend",
-        description: "An e-commerce backend using express.js and mongoDB",
+        description: "An e-commerce backend using express.js and mongoDB. Use johnDoe@mail.com and admin123 for username and password respectively",
         Tools: ["Nodes.js", "Express.js", "MongoDB", "Postman"],
         picture: require('../images/Projects pictures/Ecommerce backend.png'),
-        link: "https://github.com/Superhenyo/E-commerce-Backend"
+        link: "https://boarding-front-end-three.vercel.app/"
     },
     {
         id: "04",
