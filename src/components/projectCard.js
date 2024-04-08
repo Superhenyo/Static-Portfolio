@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 export default function ProjectsCard({ projectProps }) {
 
-    const { name, description, picture, Tools, link} = projectProps;
+    const { name, description, picture, Tools, link, repoLink } = projectProps;
 
     // Define state to store project technologies
     const [projectTech, setProjectTech] = useState([]);
@@ -19,7 +19,7 @@ export default function ProjectsCard({ projectProps }) {
     }, [Tools]);
 
     return (
-        <Container className="img-fluid">
+        <Container fluid className="img-fluid">
             <Row>
                 <Card className="projectCard bg-black border-warning-subtle">
                     <img src={picture} alt="Landing" className="projectImages img-fluid" />
@@ -27,11 +27,16 @@ export default function ProjectsCard({ projectProps }) {
                         <a href={link} target="_blank" rel="noreferrer">
                             <Card.Title className="cardTitle">{name}</Card.Title>
                         </a>
-                        <Card.Text className="allParagraph">{description}</Card.Text>
+                        <Card.Text className="allParagraph m-0">{description}</Card.Text>
                         <div>
-                            {projectTech} {/* Render the project technologies */}
+                            {projectTech}
                         </div>
                     </Card.Body>
+                    <div className="card-footer d-flex justify-content-center m-0">
+                        <a href={repoLink} rel="noopener noreferrer" target="_blank">
+                            <img src={require("../images/images/Tools/github.png")} alt="contacts Icon" className="gitIcon" />
+                        </a>
+                    </div>
                 </Card>
             </Row>
         </Container>
@@ -43,6 +48,7 @@ ProjectsCard.propTypes = {
         name: PropTypes.string.isRequired,
         description: PropTypes.string.isRequired,
         picture: PropTypes.string,
-        Tools: PropTypes.arrayOf(PropTypes.string).isRequired // Ensure Tools is an array of strings
+        Tools: PropTypes.arrayOf(PropTypes.string).isRequired, // Ensure Tools is an array of strings
+        repoLink: PropTypes.string
     })
 };

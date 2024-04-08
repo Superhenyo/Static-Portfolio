@@ -71,6 +71,17 @@ body {
   color: rgb(240, 240, 240);
   font-size: smaller;
 }
+
+.projectCard .allParagraph{
+  text-indent: 50px;
+  text-align: justify;
+  color: rgb(240, 240, 240);
+  font-size: smaller;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 .person {
   width: auto;
   height: 92vh;
@@ -127,12 +138,24 @@ body {
 }
 
 .projectCard  {
-  min-height: 400px;
-  max-height: 400px;
+  min-height: 410px;
+  max-height: 410px;
+}
+
+.gitIcon {
+  width: 40px;
+  height: 40px;
+  border: 1px solid white;
+  transition: all .5s ease-in;
+  border-radius: 50%;
+}
+
+.gitIcon:hover {
+  box-shadow: 0 0 20px 3px #fff;
 }
 
 .projectImages {
-  border: 1px solid navy;
+  border: 1px solid rgb(255, 255, 255);
   min-width: 200px;
   min-height: 150px;
   max-height: 150px;
@@ -145,7 +168,7 @@ body {
 
 .projCardButton {
   position: relative;
-  margin-left: 10px;
+  margin-left: 5px;
   padding: 3px 5px;
   border-radius: 7px;
   border: 1px solid rgb(61, 106, 255);
@@ -484,4 +507,23 @@ height: 100vh;
 }
 /* End Landing Page  */
 
+/* Education Page */
+.EducationCard {
+  border: 1px solid white;
+  border-radius: 20px;
+}
+
+.EduCerCardfontcolor{
+  color: white !important;
+}
+
+.eduCardLogo {
+  max-width: 150px;
+  max-height: 150px;
+  border-radius: 30px;
+  margin: 2px;
+}
+
+
+/* End Education Page */
 

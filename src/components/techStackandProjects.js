@@ -2,7 +2,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { useEffect, useState } from "react";
 
 // Components
-import ProjectsCard from "../components/projectCard";
+import ProjectsCard from "./ProjectCard";
 
 // mock Database
 import technology from "../data/techData";
@@ -25,6 +25,7 @@ function TechAndProjects() {
         {" " + tech.name}
       </button>
     ));
+    setProjectsTech(projTech);
 
     // Ensure projectData is available before mapping
     if (projectData && projectData.length > 0) {
@@ -34,7 +35,7 @@ function TechAndProjects() {
       setProjects(projectArr);
     }
 
-    setProjectsTech(projTech);
+
   }, []);
 
 
