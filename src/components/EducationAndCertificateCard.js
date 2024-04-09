@@ -4,7 +4,7 @@ import { Container, Card, Row, Col } from "react-bootstrap";
 
 export default function EducationAndCertificateCard({ eduCertProps }) {
     console.log(eduCertProps)
-    const { Institution, Level, Status, Start, End, Course, CertLinke, Logo } = eduCertProps
+    const { Institution, Level, Start, End, Course, CertLinke, Logo } = eduCertProps
 
 
     return (
