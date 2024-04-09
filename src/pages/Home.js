@@ -2,8 +2,8 @@ import React from "react";
 import { Container } from "react-bootstrap"
 import Intro from "../components/IntroAbout";
 import TechAndProjects from "../components/TechStackandProjects";
-import ParticleBackground from '../components/ParticleBackground'
-import Education from "../components/Education";
+import ParticleBackground from '../components/ParticleBackground';
+import EduCert from "../components/EduCert";
 // import MorphingBackground from "../components/MorphingBackground";
 
 export default function Home() {
@@ -20,7 +20,7 @@ export default function Home() {
       </Container >
 
       <Container>
-        <Education />
+        <EduCert />
       </Container>
     </>
   )

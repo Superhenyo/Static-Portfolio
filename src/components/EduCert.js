@@ -3,7 +3,7 @@ import { Container, Row } from 'react-bootstrap';
 import EducationAndCertificateCard from './EducationAndCertificateCard';
 import educationAndCertificate from '../data/education';
 
-function Education() {
+function EduCert() {
     const [eduCert, setEduCert] = useState([])
 
     useEffect(() => {
@@ -31,4 +31,4 @@ function Education() {
 }
 
 
-export default Education;
+export default EduCert;
