@@ -23,7 +23,7 @@ function Intro() {
     }
   };
   return (
-    <Container className="introAbout"  >
+    <Container fluid className="introAbout"  >
       <Row>
         <Col className="d-flex flex-column justify-content-end col-12 col-md-6">
           <img src={landingPhotos} alt="Landing" className="person" />

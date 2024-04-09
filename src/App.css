@@ -7,6 +7,84 @@
   color: white;
 }
 
+/* night mode toggle */
+.toggle-switch {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.toggle-switch .react-switch-bg {
+  border-radius: 15px;
+}
+
+.toggle-switch .react-switch-handle {
+  border-radius: 50%;
+}
+
+.toggle-switch .react-switch-bg div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 14px;
+}
+
+.toggle-switch .react-switch-bg .react-switch-handle {
+  width: 32px;
+  height: 32px;
+  position: relative;
+}
+
+.toggle-switch .react-switch-bg .react-switch-handle::before {
+  content: "🌞"; /* Sun emoji */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease-in-out;
+}
+
+.toggle-switch .react-switch-bg .react-switch-handle::after {
+  content: "🌜"; /* Moon emoji */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.toggle-switch .react-switch-bg.react-switch-bg {
+  background-color: #bc6b01; /* Day color */
+}
+
+.toggle-switch .react-switch-bg.react-switch-bg > div {
+  color: white;
+}
+
+.toggle-switch .react-switch-bg.react-switch-bg .react-switch-handle {
+  background-color: #1500ff; /* Night color */
+}
+
+.toggle-switch .react-switch-bg.react-switch-bg .react-switch-handle::before {
+  opacity: 0;
+}
+
+.toggle-switch .react-switch-bg.react-switch-bg .react-switch-handle::after {
+  opacity: 1;
+}
+
+.toggle-switch
+  .react-switch-bg.react-switch-bg.react-switch-bg.react-switch-bg.react-switch-bg
+  .react-switch-handle::before,
+.toggle-switch
+  .react-switch-bg.react-switch-bg.react-switch-bg.react-switch-bg.react-switch-bg
+  .react-switch-handle::after {
+  opacity: 0;
+}
+
+/* End night mode toggle */
+
 .color {
   color: red;
 }
@@ -18,11 +96,11 @@ body {
 
 /* NavBar */
 .navBarBackground {
- background-color: rgba(0, 0, 0, 0.126);
+  background-color: rgba(0, 0, 0, 0.126);
 }
-.navBarBackground:hover{
+.navBarBackground:hover {
   background-color: rgb(0, 0, 0);
- }
+}
 
 #ads .navBarFont {
   background: transparent;
@@ -39,26 +117,29 @@ body {
 }
 
 #ads .navBarFont:active {
-  transform: scale(0.92); 
+  transform: scale(0.92);
 }
 
 #ads .navBarFont:hover {
-  background: linear-gradient(180deg, rgb(248, 248, 248) 0%, rgba(4, 4, 4, 0.349)90%);
+  background: linear-gradient(
+    180deg,
+    rgb(248, 248, 248) 0%,
+    rgba(4, 4, 4, 0.349) 90%
+  );
   color: rgb(255, 255, 255);
-  padding-left:  20px;
-  padding-right:  20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
-
 
 /* NavBar */
 
 /* About Page */
-.introAbout h1{
+.introAbout h1 {
   font-family: "Helvetica Neue", "Times New Roman", Times, serif;
   color: rgb(131, 131, 131);
   font-size: 50px;
 }
-.introAbout p{
+.introAbout p {
   text-indent: 50px;
   text-align: justify;
   color: rgb(131, 131, 131);
@@ -72,7 +153,7 @@ body {
   font-size: smaller;
 }
 
-.projectCard .allParagraph{
+.projectCard .allParagraph {
   text-indent: 50px;
   text-align: justify;
   color: rgb(240, 240, 240);
@@ -94,7 +175,7 @@ body {
   border-radius: 50%;
   background-color: white;
   box-shadow: 0 0 2px 3px #fff;
-  transition: all .5s ease-in;
+  transition: all 0.5s ease-in;
 }
 .contacts-icon:hover {
   box-shadow: 0 0 20px 3px #fff;
@@ -105,6 +186,7 @@ body {
 /* Project Page */
 .PageSize {
   width: 100vw;
+  margin: 0;
 }
 
 .technology-button {
@@ -133,11 +215,11 @@ body {
 }
 .tech-icon {
   width: 24px;
-  height: 24px; 
+  height: 24px;
   left: 2px;
 }
 
-.projectCard  {
+.projectCard {
   min-height: 410px;
   max-height: 410px;
 }
@@ -146,7 +228,7 @@ body {
   width: 40px;
   height: 40px;
   border: 1px solid white;
-  transition: all .5s ease-in;
+  transition: all 0.5s ease-in;
   border-radius: 50%;
 }
 
@@ -234,9 +316,6 @@ button:active {
   transition: box-shadow 0.2s ease-in;
 }
 
-/* CSS */
-
-
 /* Particle Background */
 #tsparticles {
   position: absolute;
@@ -245,235 +324,8 @@ button:active {
   width: 100%;
   height: 100%;
   z-index: -2;
-}   
-
+}
 /* End Particle Background */
-
-#MorpBackground{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -2;
-}
-
-
-.text-container {
-  z-index: 100;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  position: absolute;
-  top: 0;
-  left: 0;
-  justify-content: center;
-  align-items: center;
-  font-size: 96px;
-  color: white;
-  opacity: 0.8;
-  text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
-}
-
-:root {
-  --color-bg1: rgb(142, 142, 142)
-  --color-bg2: rgb(0, 0, 0);
-  --color1: 18, 113, 255;
-  --color2: 221, 74, 255;
-  --color3: 100, 220, 255;
-  --color4: 200, 50, 50;
-  --color5: 180, 180, 50;
-  --color-interactive: 140, 100, 255;
-  --circle-size: 80%;
-  --blending: hard-light;
-}
-
-@keyframes moveInCircle {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes moveVertical {
-  0% {
-    transform: translateY(-50%);
-  }
-  50% {
-    transform: translateY(50%);
-  }
-  100% {
-    transform: translateY(-50%);
-  }
-}
-
-@keyframes moveHorizontal {
-  0% {
-    transform: translateX(-50%) translateY(-10%);
-  }
-  50% {
-    transform: translateX(50%) translateY(10%);
-  }
-  100% {
-    transform: translateX(-50%) translateY(-10%);
-  }
-}
-
-.gradient-bg {
-  margin: 0;
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  overflow: hidden;
-  background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
-  top: 0;
-  left: 0;
-
-  svg {
-    display: none;
-  }
-
-  .gradients-container {
-    overflow: hidden;
-    filter: url(#goo) blur(40px);
-    width: 100vw;
-    height: 100%;
-  }
-
-  .g1 {
-    overflow: hidden;
-    position: absolute;
-    background: radial-gradient(
-        circle at center,
-        rgba(var(--color1), 0.8) 0,
-        rgba(var(--color1), 0) 50%
-      )
-      no-repeat;
-    mix-blend-mode: var(--blending);
-
-    width: var(--circle-size);
-    height: var(--circle-size);
-    top: calc(50% - var(--circle-size) / 2);
-    left: calc(50% - var(--circle-size) / 2);
-
-    transform-origin: center center;
-    animation: moveVertical 30s ease infinite;
-
-    opacity: 1;
-  }
-
-  .g2 {
-    overflow: hidden;
-    position: absolute;
-    background: radial-gradient(
-        circle at center,
-        rgba(var(--color2), 0.8) 0,
-        rgba(var(--color2), 0) 50%
-      )
-      no-repeat;
-    mix-blend-mode: var(--blending);
-
-    width: var(--circle-size);
-    height: var(--circle-size);
-    top: calc(50% - var(--circle-size) / 2);
-    left: calc(50% - var(--circle-size) / 2);
-
-    transform-origin: calc(50% - 400px);
-    animation: moveInCircle 20s reverse infinite;
-
-    opacity: 1;
-  }
-
-  .g3 {
-    overflow: hidden;
-    position: absolute;
-    background: radial-gradient(
-        circle at center,
-        rgba(var(--color3), 0.8) 0,
-        rgba(var(--color3), 0) 50%
-      )
-      no-repeat;
-    mix-blend-mode: var(--blending);
-
-    width: var(--circle-size);
-    height: var(--circle-size);
-    top: calc(50% - var(--circle-size) / 2 + 200px);
-    left: calc(50% - var(--circle-size) / 2 - 500px);
-
-    transform-origin: calc(50% + 400px);
-    animation: moveInCircle 40s linear infinite;
-
-    opacity: 1;
-  }
-
-  .g4 {
-    position: absolute;
-    overflow: hidden;
-    background: radial-gradient(
-        circle at center,
-        rgba(var(--color4), 0.8) 0,
-        rgba(var(--color4), 0) 50%
-      )
-      no-repeat;
-    mix-blend-mode: var(--blending);
-
-    width: var(--circle-size);
-    height: var(--circle-size);
-    top: calc(50% - var(--circle-size) / 2);
-    left: calc(50% - var(--circle-size) / 2);
-
-    transform-origin: calc(50% - 200px);
-    animation: moveHorizontal 40s ease infinite;
-
-    opacity: 0.7;
-  }
-
-  .g5 {
-    overflow: hidden;
-    position: absolute;
-    background: radial-gradient(
-        circle at center,
-        rgba(var(--color5), 0.8) 0,
-        rgba(var(--color5), 0) 50%
-      )
-      no-repeat;
-    mix-blend-mode: var(--blending);
-
-    width: calc(var(--circle-size) * 2);
-    height: calc(var(--circle-size) * 2);
-    top: calc(50% - var(--circle-size));
-    left: calc(50% - var(--circle-size));
-
-    transform-origin: calc(50% - 800px) calc(50% + 200px);
-    animation: moveInCircle 20s ease infinite;
-
-    opacity: 1;
-  }
-
-  .interactive {
-    overflow: hidden;
-    position: absolute;
-    background: radial-gradient(
-        circle at center,
-        rgba(var(--color-interactive), 0.8) 0,
-        rgba(var(--color-interactive), 0) 50%
-      )
-      no-repeat;
-    mix-blend-mode: var(--blending);
-
-    width: 100%;
-    height: 100%;
-    top: -50%;
-    left: -50%;
-
-    opacity: 0.7;
-  }
-}
 
 /* Landing Page  */
 .typeWriter {
@@ -487,7 +339,7 @@ button:active {
 }
 
 Navbar {
- box-shadow: 0 0 2px 3px #fff;
+  box-shadow: 0 0 2px 3px #fff;
 }
 
 .landingButton {
@@ -503,7 +355,7 @@ Navbar {
 }
 
 .testing {
-height: 100vh;
+  height: 100vh;
 }
 /* End Landing Page  */
 
@@ -513,7 +365,7 @@ height: 100vh;
   border-radius: 20px;
 }
 
-.EduCerCardfontcolor{
+.EduCerCardfontcolor {
   color: white !important;
 }
 
@@ -524,6 +376,4 @@ height: 100vh;
   margin: 2px;
 }
 
-
 /* End Education Page */
-

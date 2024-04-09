@@ -22,8 +22,8 @@ export default function EducationAndCertificateCard({ eduCertProps }) {
                         </Card.Footer>
                     </Card>
                 </Col>
-                <Col className="d-flex justify-content-center align-items-center col-lg-3">
-                    <img src={Logo} alt="icon" className=" eduCardLogo img-fluid" />
+                <Col className="d-flex justify-content-end align-items-center col-lg-3">
+                    <img src={Logo} alt="icon" className="eduCardLogo mx-5" />
                 </Col>
             </Row>
 

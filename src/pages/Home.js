@@ -4,22 +4,25 @@ import Intro from "../components/IntroAbout";
 import TechAndProjects from "../components/TechStackandProjects";
 import ParticleBackground from '../components/ParticleBackground';
 import EduCert from "../components/EduCert";
-// import MorphingBackground from "../components/MorphingBackground";
 
 export default function Home() {
   return (
     <>
-      <Container className="PageSize" id="Home">
+
+      <Container fluid className="PageSize" id="Home">
+        <br />
         <ParticleBackground />
         <Intro />
       </Container >
 
-      <Container className="PageSize">
-        <h1 className="text-center mt-5" id="Projects">Projects</h1>
+      <Container className="PageSize" id="Projects">
+        <br />
+        <h1 className="text-center mt-5" >Projects</h1>
         <TechAndProjects />
       </Container >
 
-      <Container id="Education">
+      <Container className="PageSize" id="Education" >
+        <br />
         <EduCert />
       </Container>
     </>

@@ -1,9 +1,13 @@
-import { Container, Nav, Navbar } from "react-bootstrap";
-import logoIcon from "../images/LOGOIcon.png";
+import React from 'react';
+import { Container, Nav, Navbar } from 'react-bootstrap';
+import logoIcon from "../images/navBar/LOGOIcon.png";
+import ToggleSwitch from './ToggleSwitch';
+
 
 function AppNavbar() {
+
   return (
-    <Container fluid className="p-0 m-0 sticky-top">
+    <Container fluid className={`p-0 m-0 sticky-top `}>
       <Navbar collapseOnSelect expand="lg" className="navBarBackground">
         <Navbar.Brand href="/" className="ms-5">
           <img
@@ -25,6 +29,9 @@ function AppNavbar() {
             </Nav.Link>
             <Nav.Link href="#Education" className="navBarFont">
               Education
+            </Nav.Link>
+            <Nav.Link>
+              <ToggleSwitch />
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

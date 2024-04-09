@@ -19,7 +19,7 @@ export default function ProjectsCard({ projectProps }) {
     }, [Tools]);
 
     return (
-        <Container fluid className="img-fluid">
+        <Container fluid>
             <Row>
                 <Card className="projectCard bg-black border-warning-subtle">
                     <img src={picture} alt="Landing" className="projectImages img-fluid" />
@@ -32,11 +32,12 @@ export default function ProjectsCard({ projectProps }) {
                             {projectTech}
                         </div>
                     </Card.Body>
-                    <div className="card-footer d-flex justify-content-center m-0">
+                    <Card.Footer className="text-center m-0">
                         <a href={repoLink} rel="noopener noreferrer" target="_blank">
-                            <img src={require("../images/images/Tools/github.png")} alt="contacts Icon" className="gitIcon" />
+                            <img src={require("../images/Tools/github.png")} alt="contacts Icon" className="gitIcon" />
                         </a>
-                    </div>
+
+                    </Card.Footer>
                 </Card>
             </Row>
         </Container>

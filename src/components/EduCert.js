@@ -24,6 +24,7 @@ function EduCert() {
                         {element}
                     </Row>
                 ))}
+                
             </Container>
 
         </>

@@ -47,7 +47,7 @@ function TechAndProjects() {
         <h4 className="mt-3">Projects: </h4>
         <Row>
           {projects.map((project, index) => (
-            <Col key={index} xs={12} sm={6} md={6} lg={3} className="mb-2 pt-3">
+            <Col key={index} xs={12} sm={6} md={6} lg={4} xxl={3} className="mb-2 pt-3">
               {project}
             </Col>
           ))}
