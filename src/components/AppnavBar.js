@@ -23,8 +23,8 @@ function AppNavbar() {
             <Nav.Link href="#Projects" className="navBarFont">
               Project
             </Nav.Link>
-            <Nav.Link href="#Projects" className="navBarFont">
-              {/* About */}
+            <Nav.Link href="#Education" className="navBarFont">
+              Education
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

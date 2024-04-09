@@ -19,7 +19,7 @@ export default function Home() {
         <TechAndProjects />
       </Container >
 
-      <Container>
+      <Container id="Education">
         <EduCert />
       </Container>
     </>
