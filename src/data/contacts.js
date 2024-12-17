@@ -17,7 +17,8 @@ const contacts = [
     {
         name: "Resume",
         icon: require('../images/contacts/resume.jpg'),
-        link: "https://drive.google.com/file/d/1XnWCh1-w-oQWc_bdve79w-9lZqfW7DI_/view"
+        link: "https://drive.google.com/file/d/1V-TJBr1TOo9ZlL72BGAVR2jhZ8Z63hv4/view"
     }
 ]
 export default contacts;
+
