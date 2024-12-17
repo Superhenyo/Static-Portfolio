@@ -1,11 +1,9 @@
-import React from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import React from "react";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import logoIcon from "../images/navBar/LOGOIcon.png";
-import ToggleSwitch from './ToggleSwitch';
-
+import ToggleSwitch from "./ToggleSwitch";
 
 function AppNavbar() {
-
   return (
     <Container fluid className={`p-0 m-0 sticky-top `}>
       <Navbar collapseOnSelect expand="lg" className="navBarBackground">
@@ -21,7 +19,7 @@ function AppNavbar() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav ml-5">
           <Nav className="ms-auto d-flex justify-content-around" id="ads">
-            <Nav.Link href="#Home" className="navBarFont" >
+            <Nav.Link href="#Home" className="navBarFont">
               Home
             </Nav.Link>
             <Nav.Link href="#Projects" className="navBarFont">
@@ -30,8 +28,9 @@ function AppNavbar() {
             <Nav.Link href="#Education" className="navBarFont">
               Education
             </Nav.Link>
+            {/* toggle switch for light and dark mode */}
             <Nav.Link>
-              <ToggleSwitch />
+              {/* <ToggleSwitch /> */}
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

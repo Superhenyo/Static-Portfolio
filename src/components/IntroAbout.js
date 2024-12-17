@@ -4,26 +4,8 @@ import landingPhotos from "../images/landingPage/landingPage.png";
 import contacts from "../data/contacts";
 
 function Intro() {
-  const handleClick = async () => {
-    console.log("clicked")
-    try {
-      const response = await fetch('https://portofolio-backend-f6lt.onrender.com/user/counter', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      });
-      if (response.ok) {
-        console.log('Counter incremented successfully');
-      } else {
-        console.error('Failed to increment counter');
-      }
-    } catch (error) {
-      console.error('Error:', error);
-    }
-  };
   return (
-    <Container fluid className="introAbout"  >
+    <Container fluid className="introAbout">
       <Row>
         <Col className="d-flex flex-column justify-content-end col-12 col-md-6">
           <img src={landingPhotos} alt="Landing" className="person" />
@@ -32,12 +14,12 @@ function Intro() {
           <h1 className="my-5">Hello there!</h1>
           <div>
             <p className="allParagraph">
-              I am Emil a Computer Engineering graduate with practical experience as
-              an intern at Nueva Vizcaya State University Management Information
-              System (MIS), where I contributed to maintaining and improving
-              their computer system. This experience enhanced not only my
-              technical abilities but also improved my communication and
-              collaboration skills.
+              I am Emil a Computer Engineering graduate with practical
+              experience as an intern at Nueva Vizcaya State University
+              Management Information System (MIS), where I contributed to
+              maintaining and improving their computer system. This experience
+              enhanced not only my technical abilities but also improved my
+              communication and collaboration skills.
             </p>
             <p className="allParagraph">
               I'm also a graduate of Zuitt Coding Bootcamp, I have expertise in
@@ -46,16 +28,24 @@ function Intro() {
               completed the Main Course Package (MERN) at Zuitt.
             </p>
             <div className="social-icons-row text-center">
-              <Row >
+              <Row>
                 <Col className="d-flex justify-content-evenly mb-5">
                   {contacts.map((cont, index) => (
-                    <a href={cont.link} key={index} rel="noopener noreferrer" target="_blank">
-                      <img src={cont.icon} alt="contacts Icon" className="contacts-icon" />
+                    <a
+                      href={cont.link}
+                      key={index}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      <img
+                        src={cont.icon}
+                        alt="contacts Icon"
+                        className="contacts-icon"
+                      />
                     </a>
                   ))}
                 </Col>
               </Row>
-              <button className='landingButton ' onClick={handleClick}>Click me!</button>
             </div>
           </div>
         </Col>
